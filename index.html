@@ -4,217 +4,190 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hanifur Rahman Ridoy | Digital Marketer, WordPress &amp; SaaS</title>
-<meta name="description" content="Digital marketer from Bogura, Bangladesh. SEO, partnerships, email and content for WordPress and SaaS products.">
+<meta name="description" content="Digital marketer from Bogura, Bangladesh. SEO, link building, partnerships, email and content for WordPress and SaaS products.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#F6F9F9; --ink:#14201F; --muted:#4D6160; --line:#D3DEDE;
-  --teal:#0B7F86; --deep:#0A3D42; --tint:#E2F0F0;
-  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
-  --body:"Figtree","Segoe UI",Arial,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#0D1617; --ink:#E4EEEE; --muted:#9DB2B2; --line:#243536; --teal:#4FC3CB; --deep:#BFE6E8; --tint:#13292B}
-}
+:root{--bg:#0A1112;--panel:#111B1C;--ink:#E6EFEF;--muted:#98AEAE;--line:#223334;--teal:#3FC6CF;--glow:rgba(63,198,207,.14);
+--head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;--body:"Figtree","Segoe UI",Arial,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
 a{color:var(--teal)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
-
-header.top{padding:20px 0;border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);margin:0}
+header.top{position:sticky;top:0;z-index:5;background:rgba(10,17,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
 .brand{font:700 1.05rem var(--head);color:var(--ink);text-decoration:none}
-nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-weight:500}
+nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:500;font-size:.98rem}
 nav a:hover{color:var(--teal)}
-
-.hero{padding:72px 0 56px;display:grid;grid-template-columns:1fr 220px;gap:40px;align-items:center}
-.hero h1{font:800 clamp(2.6rem,8vw,5.2rem)/0.98 var(--head);letter-spacing:-0.03em;margin:0 0 22px;color:var(--deep)}
-.hero p.lead{font-size:1.25rem;max-width:34em;margin:0 0 28px;color:var(--ink)}
-.photo{width:220px;height:220px;border-radius:28px;object-fit:cover;background:var(--tint);border:1px solid var(--line)}
+.hero{padding:76px 0 60px;display:grid;grid-template-columns:1fr 250px;gap:44px;align-items:center;background:radial-gradient(600px 300px at 15% 0,var(--glow),transparent)}
+.tag{color:var(--teal);font-weight:600;margin:0 0 14px}
+.hero h1{font-weight:800;font-size:clamp(2.6rem,8vw,5rem);line-height:.98;letter-spacing:-.03em;margin-bottom:22px}
+.lead{font-size:1.2rem;max-width:34em;margin:0 0 28px;color:#C9D8D8}
+.photo{width:250px;height:250px;border-radius:32px;object-fit:cover;background:var(--panel);border:1px solid var(--line);box-shadow:0 0 60px var(--glow)}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--teal)}
-.btn.main{background:var(--teal);color:#fff}
-.btn.alt{color:var(--teal)}
-@media (prefers-color-scheme:dark){.btn.main{color:#06191A}}
-.btn:hover{filter:brightness(1.08)}
-
-.proof{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.proof div{padding:26px 20px 26px 0}
-.proof div+div{padding-left:24px;border-left:1px solid var(--line)}
-.proof b{display:block;font:800 2.4rem/1 var(--head);color:var(--teal);margin-bottom:6px}
-.proof span{color:var(--muted);font-size:.98rem}
-
-section{padding:64px 0 0}
-.row{display:grid;grid-template-columns:200px 1fr;gap:32px}
-.row>h2{font:700 1.5rem/1.2 var(--head);margin:0;letter-spacing:-0.01em}
-.job{margin-bottom:34px}
-.job h3{font:700 1.2rem/1.3 var(--head);margin:0}
-.job .meta{color:var(--muted);margin:2px 0 10px}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--teal)}
+.btn.main{background:var(--teal);color:#06191A}
+.btn:hover{filter:brightness(1.1)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:28px 20px}
+.stats div+div{border-left:1px solid var(--line)}
+.stats b{display:block;font:800 2.5rem/1 var(--head);color:var(--teal);margin-bottom:6px}
+.stats span{color:var(--muted);font-size:.98rem}
+section{padding:72px 0 0}
+section>.wrap>h2{font-size:clamp(1.8rem,4vw,2.4rem);letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 30px;max-width:40em}
+.about p{max-width:42em;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card .n{font:700 .95rem var(--head);color:var(--teal)}
+.card h3{font-size:1.2rem;margin:8px 0}
+.card p{margin:0;color:var(--muted);font-size:.98rem}
+.job{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:16px}
+.job h3{font-size:1.2rem}
+.meta{color:var(--teal);margin:4px 0 12px;font-weight:500}
 ul{margin:0;padding-left:1.15em}
-li{margin-bottom:6px;max-width:42em}
+li{margin-bottom:6px;max-width:44em}
 .chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
-.chips li{margin:0;padding:8px 16px;background:var(--tint);border-radius:10px;font-weight:500}
-.note{color:var(--muted);max-width:42em}
-
-footer{margin-top:80px;padding:48px 0;border-top:1px solid var(--line)}
-footer h2{font:800 clamp(1.8rem,5vw,2.8rem)/1.1 var(--head);margin:0 0 14px;color:var(--deep);letter-spacing:-0.02em}
-footer p{margin:0 0 22px;max-width:34em}
-.fine{margin-top:36px;color:var(--muted);font-size:.9rem}
-
-@media (max-width:760px){
-  .hero{grid-template-columns:1fr;padding-top:44px}
-  .photo{order:-1;width:140px;height:140px;border-radius:22px}
-  .row{grid-template-columns:1fr;gap:14px}
-  .proof{grid-template-columns:1fr}
-  .proof div,.proof div+div{padding:18px 0;border-left:0}
-  .proof div+div{border-top:1px solid var(--line)}
-  nav a{margin:0 16px 0 0}
+.chips li{margin:0;padding:9px 18px;background:var(--panel);border:1px solid var(--line);border-radius:999px;font-weight:500}
+details{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font:600 1.05rem var(--head)}
+details p{margin:12px 0 0;color:#C0D0D0;max-width:44em}
+footer{margin-top:90px;padding:60px 0;border-top:1px solid var(--line);background:radial-gradient(600px 260px at 85% 100%,var(--glow),transparent)}
+footer h2{font-size:clamp(1.9rem,5vw,3rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+footer p{margin:0 0 24px;max-width:34em}
+.links{margin-top:30px;display:flex;gap:22px;flex-wrap:wrap}
+.fine{color:var(--muted);font-size:.9rem;margin-top:34px}
+@media (max-width:780px){
+.hero{grid-template-columns:1fr;padding-top:44px}
+.photo{order:-1;width:150px;height:150px;border-radius:24px}
+.grid{grid-template-columns:1fr}
+.stats{grid-template-columns:1fr}
+.stats div+div{border-left:0;border-top:1px solid var(--line)}
+nav a{margin:0 14px 0 0}
+section{padding-top:56px}
 }
 </style>
 </head>
 <body>
-
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top">Hanifur Rahman Ridoy</a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#community">Community</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+<header class="top"><div class="wrap">
+<a class="brand" href="#top">Hanifur Rahman Ridoy</a>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+</div></header>
 
 <main id="top">
-  <div class="wrap">
-    <div class="hero">
-      <div>
-        <h1>Hanifur Rahman Ridoy</h1>
-        <p class="lead">I'm a digital marketer for WordPress and SaaS products. I work on SEO, partnerships, email and content, so good products reach the people who need them.</p>
-        <div class="btns">
-          <a class="btn main" href="mailto:hridoymohan570@gmail.com">Email me</a>
-          <a class="btn alt" href="https://www.linkedin.com/in/mohanhridoy/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-      <!-- Put your photo in the same folder and name it photo.jpg -->
-      <img class="photo" src="photo.jpg" alt="Portrait of Hanifur Rahman Ridoy" onerror="this.remove()">
-    </div>
+<div class="wrap">
+<div class="hero">
+<div>
+<p class="tag">Digital Marketer · WordPress &amp; SaaS · Bogura, Bangladesh</p>
+<h1>Hanifur Rahman Ridoy</h1>
+<p class="lead">I help WordPress and SaaS products get found, linked and talked about. SEO, partnerships, email and content, all in one place.</p>
+<div class="btns"><a class="btn main" href="mailto:hridoymohan570@gmail.com">Let's talk</a><a class="btn" href="https://www.linkedin.com/in/mohanhridoy/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<img class="photo" src="photo.jpg" alt="Portrait of Hanifur Rahman Ridoy" onerror="this.remove()">
+</div>
+<div class="stats">
+<div><b>200+</b><span>partnerships managed</span></div>
+<div><b>20+</b><span>YouTube influencers worked with</span></div>
+<div><b>400,000+</b><span>active installs across the plugin portfolio I market</span></div>
+</div>
+</div>
 
-    <div class="proof">
-      <div><b>200+</b><span>partnerships managed</span></div>
-      <div><b>20+</b><span>YouTube influencers worked with</span></div>
-      <div><b>400,000+</b><span>active installs across the plugin portfolio I market</span></div>
-    </div>
+<section id="about" class="about"><div class="wrap">
+<h2>About me</h2>
+<p class="sub">Marketing for products I actually understand.</p>
+<p>I'm a digital marketer at Sigmative, the company behind the BdThemes WordPress plugins. I work on SEO, link building, partnerships, email marketing and content, and I like building real relationships with the people and sites I work with.</p>
+<p>I started at BdThemes in 2022 as an outreach and partnership manager, and I'm now a Digital Marketing Specialist at Sigmative. Outside work, I organize the Bogura WordPress Community and contribute Bengali translations as part of WordPress Polyglots.</p>
+</div></section>
 
-    <section id="work">
-      <div class="row">
-        <h2>Experience</h2>
-        <div>
-          <div class="job">
-            <h3>Digital Marketing Specialist, Sigmative</h3>
-            <p class="meta">2024 to present</p>
-            <ul>
-              <li>Suggest product features based on user needs and market trends.</li>
-              <li>Run SEO strategy to improve rankings and organic traffic.</li>
-              <li>Build partnerships and handle email marketing campaigns.</li>
-              <li>Manage social media to grow brand awareness and engagement.</li>
-              <li>Create content for blogs, websites and social platforms.</li>
-              <li>Analyze campaign performance and optimize for better results.</li>
-            </ul>
-          </div>
-          <div class="job">
-            <h3>Digital Marketing Executive / Outreach &amp; Partnership Manager, BdThemes</h3>
-            <p class="meta">2022 to 2024</p>
-            <ul>
-              <li>Wrote product content for plugins, landing pages and blogs.</li>
-              <li>Managed 200+ partnerships and worked with 20+ YouTube influencers.</li>
-              <li>Handled affiliate recruitment, outreach and collaborations.</li>
-              <li>Managed social media content and community engagement.</li>
-            </ul>
-          </div>
-          <div class="job">
-            <h3>Education</h3>
-            <p class="meta">Mechanical Engineering, Bogura Polytechnic Institute, 2018 to 2023</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<section id="services"><div class="wrap">
+<h2>What I do</h2>
+<p class="sub">The work I do day to day for WordPress and SaaS products.</p>
+<div class="grid">
+<div class="card"><span class="n">01</span><h3>SEO, AEO and GEO</h3><p>Strategy for better rankings and organic traffic, and for showing up in AI answers too.</p></div>
+<div class="card"><span class="n">02</span><h3>Link building and outreach</h3><p>Guest posts, content exchanges and partnership deals with sites that fit your niche.</p></div>
+<div class="card"><span class="n">03</span><h3>Email marketing</h3><p>Campaigns and cold outreach that people actually reply to.</p></div>
+<div class="card"><span class="n">04</span><h3>Influencer marketing</h3><p>Working with YouTube creators and affiliates to get products in front of the right audience.</p></div>
+<div class="card"><span class="n">05</span><h3>Content writing</h3><p>Landing pages, WordPress.org listings, blog posts and product content.</p></div>
+<div class="card"><span class="n">06</span><h3>Social media</h3><p>Content and community engagement to grow brand awareness.</p></div>
+</div>
+</div></section>
 
-    <!--
-    CASE STUDIES: add real numbers, then remove this comment wrapper.
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<p class="sub">Two roles, one product family.</p>
+<div class="job">
+<h3>Digital Marketing Specialist, Sigmative</h3>
+<p class="meta">2024 to present</p>
+<ul>
+<li>Suggest product features based on user needs and market trends.</li>
+<li>Run SEO strategy to improve rankings and organic traffic.</li>
+<li>Build partnerships and handle email marketing campaigns.</li>
+<li>Manage social media to grow brand awareness and engagement.</li>
+<li>Create content for blogs, websites and social platforms.</li>
+<li>Analyze campaign performance and optimize for better results.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Digital Marketing Executive / Outreach &amp; Partnership Manager, BdThemes</h3>
+<p class="meta">2022 to 2024</p>
+<ul>
+<li>Wrote product content for plugins, landing pages and blogs.</li>
+<li>Managed 200+ partnerships and worked with 20+ YouTube influencers.</li>
+<li>Handled affiliate recruitment, outreach and collaborations.</li>
+<li>Managed social media content and community engagement.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Education</h3>
+<p class="meta">2018 to 2023</p>
+<p style="margin:0">Mechanical Engineering, Bogura Polytechnic Institute</p>
+</div>
+</div></section>
 
-    <section id="cases">
-      <div class="row">
-        <h2>Case studies</h2>
-        <div>
-          <div class="job">
-            <h3>Project name</h3>
-            <p class="meta">Problem</p>
-            <ul>
-              <li>What I did: ...</li>
-              <li>Result: ... (backlinks, traffic, installs, reply rate)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
+<section id="tools"><div class="wrap">
+<h2>Tools I use</h2>
+<p class="sub">My everyday stack.</p>
+<ul class="chips"><li>WordPress</li><li>FluentCRM</li><li>ReachInbox</li><li>Apollo.io</li><li>Google Search Console</li><li>Gmail</li></ul>
+</div></section>
 
-    <section id="skills">
-      <div class="row">
-        <h2>Skills</h2>
-        <ul class="chips">
-          <li>SEO, AEO, GEO</li>
-          <li>Email marketing</li>
-          <li>Outreach and partnerships</li>
-          <li>Influencer marketing</li>
-          <li>Social media management</li>
-          <li>Content writing</li>
-          <li>WordPress and SaaS marketing</li>
-          <li>Event representation</li>
-          <li>Team collaboration</li>
-        </ul>
-      </div>
-    </section>
+<section id="products"><div class="wrap">
+<h2>Products I market</h2>
+<p class="sub">Part of the Sigmative (BdThemes) WordPress plugin portfolio.</p>
+<ul class="chips"><li>Element Pack Pro</li><li>Prime Slider</li><li>ZoloBlocks</li><li>Ultimate Store Kit</li><li>One Accessibility</li></ul>
+</div></section>
 
-    <section id="products">
-      <div class="row">
-        <h2>Products I market</h2>
-        <p class="note">Element Pack Pro, Prime Slider, ZoloBlocks, Ultimate Store Kit and One Accessibility, all part of the Sigmative (BdThemes) WordPress plugin portfolio.</p>
-      </div>
-    </section>
+<section id="community"><div class="wrap">
+<h2>Community</h2>
+<p class="sub">Giving back to the WordPress world.</p>
+<ul>
+<li>Organizer of the Bogura WordPress Community.</li>
+<li>Polyglots contributor for Bengali translations.</li>
+<li>Represented the company at WordCamp events.</li>
+</ul>
+</div></section>
 
-    <section id="community">
-      <div class="row">
-        <h2>Community</h2>
-        <ul>
-          <li>Organizer of the Bogura WordPress Community.</li>
-          <li>Polyglots contributor for Bengali translations.</li>
-          <li>Represented the company at WordCamp events.</li>
-        </ul>
-      </div>
-    </section>
-  </div>
+<section id="faq"><div class="wrap">
+<h2>FAQ</h2>
+<p class="sub">Quick answers to things people ask me.</p>
+<details><summary>What kind of products do you work with?</summary><p>Mostly WordPress plugins and SaaS products. That's where I've spent my whole marketing career, so I know how these products are found, compared and bought.</p></details>
+<details><summary>How do you approach link building?</summary><p>I start with sites that really fit the product and its audience, then reach out with something useful for them too, like a guest post or a content exchange. Real relationships last longer than one-off links.</p></details>
+<details><summary>Do you only do SEO?</summary><p>No. SEO is a big part, but I also handle partnerships, email campaigns, influencer outreach, content and social media. They work better together.</p></details>
+<details><summary>Can we work together on a project?</summary><p>Yes. Send me a short note about the product and what you want to achieve, and we can talk through the scope, deliverables and timeline.</p></details>
+</div></section>
 </main>
 
-<footer id="contact">
-  <div class="wrap">
-    <h2>Let's work together</h2>
-    <p>Have a product to grow, a partnership to talk through, or a guest post idea? Send me a message.</p>
-    <div class="btns">
-      <a class="btn main" href="mailto:hridoymohan570@gmail.com">hridoymohan570@gmail.com</a>
-      <a class="btn alt" href="tel:+8801581470631">+880 1581 470631</a>
-    </div>
-    <p class="fine">Bogura, Bangladesh</p>
-  </div>
-</footer>
-
+<footer id="contact"><div class="wrap">
+<h2>Let's work together</h2>
+<p>Have a product to grow, a partnership to talk through, or a guest post idea? Send me a message.</p>
+<div class="btns"><a class="btn main" href="mailto:hridoymohan570@gmail.com">hridoymohan570@gmail.com</a><a class="btn" href="tel:+8801581470631">+880 1581 470631</a></div>
+<div class="links"><a href="https://www.linkedin.com/in/mohanhridoy/" target="_blank" rel="noopener">LinkedIn</a></div>
+<p class="fine">Bogura, Bangladesh</p>
+</div></footer>
 </body>
 </html>
