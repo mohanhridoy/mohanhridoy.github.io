@@ -1,6 +1,6 @@
 # Ridoy — Digital Marketing Portfolio
 
-A static portfolio inspired by the supplied white-and-blue editorial reference. Includes a responsive layout, portrait cutout, light/dark toggle, menu, service links, experience, products, community, FAQ, and contact links.
+A static portfolio inspired by the supplied white-and-blue editorial reference. The advanced demo includes a responsive editorial layout, selected-work proof cards, product portfolio, experience, community credibility, FAQ, downloadable résumé, light/dark mode, and accessible motion.
 
 ## Upload to your existing GitHub repository
 
@@ -16,10 +16,14 @@ A static portfolio inspired by the supplied white-and-blue editorial reference. 
 
 - `index.html` — content, page structure, and metadata
 - `style.css` — layout, colors, typography, and responsive styles
-- `script.js` — theme toggle and navigation
+- `script.js` — theme, navigation, scroll reveals, animated metrics, CTA events, progress indicator, and mobile CTA
 - `portrait.png` — transparent cutout from your newly supplied photo, used in the hero
 - `favicon.svg` — browser icon
 - `photo.png` — your newly supplied photo, used for the social preview
+- `mohan-hridoy-resume.pdf` — downloadable one-page résumé
+- `robots.txt` and `sitemap.xml` — search crawler files
+- `OPTIMIZATION-NOTES.md` — measurement hooks and future test ideas
+- `tools/generate_resume.py` — reproducible résumé generator
 
 No build, npm installation, paid service, API key, or backend is required. You can double-click `index.html` to preview locally. Fonts load from Google Fonts when online; system fonts are used as fallbacks. Contact buttons open email, telephone, or LinkedIn.
 
@@ -27,4 +31,4 @@ No build, npm installation, paid service, API key, or backend is required. You c
 
 Edit text in `index.html`. Change the main blue using `--blue` near the top of `style.css`. Update the email/phone/LinkedIn links in `index.html` when needed. The experience, dates, product names, contact details, and headline metrics were retained from your existing portfolio. No invented testimonials, case-study results, or prices were added.
 
-The cutout was prepared from your newly supplied photo with the built-in image generation tool. See `ASSET-NOTES.md` for its editing prompt.
+The cutout was prepared from your newly supplied photo with the built-in image generation tool. See `ASSET-NOTES.md` for its editing prompt. The current working copy is a local demo until you explicitly approve publishing it to GitHub.
