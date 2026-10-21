@@ -133,6 +133,56 @@
     });
   });
 
+  document.querySelectorAll('[data-contact-slider]').forEach((slider) => {
+    const slides = [...slider.querySelectorAll('.contact-slide')];
+    const dots = [...slider.querySelectorAll('[data-slide-to]')];
+    const previous = slider.querySelector('[data-slider-prev]');
+    const next = slider.querySelector('[data-slider-next]');
+    const count = slider.querySelector('.contact-photo-count b');
+    let activeIndex = 0;
+    let autoplay;
+
+    function showSlide(nextIndex) {
+      activeIndex = (nextIndex + slides.length) % slides.length;
+      slides.forEach((slide, index) => {
+        const isActive = index === activeIndex;
+        slide.classList.toggle('is-active', isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
+      });
+      dots.forEach((dot, index) => {
+        const isActive = index === activeIndex;
+        dot.classList.toggle('is-active', isActive);
+        if (isActive) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
+      count.textContent = String(activeIndex + 1).padStart(2, '0');
+    }
+
+    function stopAutoplay() {
+      window.clearInterval(autoplay);
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      if (!reducedMotion.matches) autoplay = window.setInterval(() => showSlide(activeIndex + 1), 4500);
+    }
+
+    previous.addEventListener('click', () => { showSlide(activeIndex - 1); startAutoplay(); });
+    next.addEventListener('click', () => { showSlide(activeIndex + 1); startAutoplay(); });
+    dots.forEach((dot, index) => dot.addEventListener('click', () => { showSlide(index); startAutoplay(); }));
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+    slider.addEventListener('focusin', stopAutoplay);
+    slider.addEventListener('focusout', (event) => {
+      if (!slider.contains(event.relatedTarget)) startAutoplay();
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopAutoplay();
+      else startAutoplay();
+    });
+    startAutoplay();
+  });
+
   document.querySelectorAll('[data-track]').forEach((link) => {
     link.addEventListener('click', () => {
       const detail = { event: 'portfolio_cta', action: link.dataset.track, label: link.textContent.trim() };
