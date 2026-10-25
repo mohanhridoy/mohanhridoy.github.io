@@ -1,11 +1,13 @@
 (() => {
   const root = document.documentElement;
+  const header = document.querySelector('.site-header');
   const themeButton = document.querySelector('.theme-toggle');
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('#navigation');
   const progress = document.querySelector('.scroll-progress span');
   const portrait = document.querySelector('.hero-portrait');
   const mobileMeeting = document.querySelector('.mobile-meeting');
+  const toolkitToggle = document.querySelector('.toolkit-toggle');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   root.classList.add('js');
   themeButton.hidden = false;
@@ -97,6 +99,7 @@
   function updateScrollEffects() {
     const scrollable = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
     progress.style.transform = `scaleX(${Math.min(window.scrollY / scrollable, 1)})`;
+    header.classList.toggle('is-scrolled', window.scrollY > 24);
     mobileMeeting.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.65);
     if (!reducedMotion.matches && window.innerWidth > 760) {
       const heroShift = Math.min(window.scrollY * 0.055, 24);
@@ -111,6 +114,16 @@
     }
   }, { passive: true });
   updateScrollEffects();
+
+  if (toolkitToggle) {
+    toolkitToggle.addEventListener('click', () => {
+      const toolGroups = toolkitToggle.closest('.tool-groups');
+      const expanded = toolkitToggle.getAttribute('aria-expanded') === 'true';
+      toolkitToggle.setAttribute('aria-expanded', String(!expanded));
+      toolkitToggle.firstChild.textContent = expanded ? 'VIEW FULL TOOLKIT ' : 'SHOW LESS ';
+      toolGroups.classList.toggle('is-expanded', !expanded);
+    });
+  }
 
   if (!reducedMotion.matches && window.matchMedia('(pointer: fine)').matches) {
     document.querySelectorAll('.magnetic').forEach((button) => {
