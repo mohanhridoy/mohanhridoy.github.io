@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mohanhridoy.github.io/sitemap.xml
+Sitemap: https://mohanhridoy.vercel.app/sitemap.xml
